@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Layout responsive</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="C-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="estilos/estilosArea.css">
+
+</head>
+<body>
+	<div class="contenedor">
+		<header class="header">
+			<h2>Header</h2>
+		</header>
+		<main class="contenido">
+			<h1> Contenido</h1>
+			<p>
+				
+				"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia 
+				non numquam eius modi tempora incidunt ut labore
+
+				<br><br>
+			    et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+			</p>
+			
+		</main>
+		<aside class="sidebar">
+			
+			<h3>Sidebar</h3>
+		</aside>
+		
+		<div class="widget-1">
+			<h3>widget-1</h3>
+		</div>
+		<div class="widget-2">
+			<h3>widget-2</h3>
+		</div>
+		<footer class="footer">
+			<h3>Footer</h3>
+		</footer>
+	</div>
+
+
+	<style>
+		*{
+	margin:0;
+	padding:0,
+}
+
+
+body{
+	background: gray;
+	color:black;
+	font-family: 'roboto', sans-serif;
+}
+
+.contenedor{
+
+     width: 90%;
+     max-width: 1000px;
+     margin:20px auto;
+     display: grid;
+     grid-gap: 10px;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(4,auto);
+     grid-template-areas:"header header header"
+     					 " contenido contenido sidebar"
+                         "widget-1 widget-2 sidebar"
+                         "footer footer footer"
+}
+.contenedor > div,
+.contenedor .header,
+.contenedor .sidebar,
+.contenedor .contenido,
+.contenedor .footer {
+   background: green;
+   padding:20px;
+   border-radius: 4px;
+
+}
+.contenedor .header{
+	background: blue;
+	color:white;
+	grid-area: header;
+
+}
+.contenedor .contenido{
+
+	grid-area:contenido; 
+
+}
+.contenedor .sidebar{
+	grid-column: 3/4;
+	background: pink;
+	text-align: center;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+  
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+	background: red;
+	color: yellow;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.contenedor .widget-1{
+	grid-area: widget-1;
+
+}
+
+.contenedor .widget-2{
+	grid-area: widget-2;
+	}
+.contenedor .footer{
+	background: violet;
+	color: white;
+	grid-area: footer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+
+}
+
+@media screen and (max-width: 768px){
+	.contenedor{
+
+        grid-template-areas:"header header header"
+     					 " contenido contenido contenido"
+     					 "sidebar sidebar sidebar"
+                         "widget-1 widget-1 widget-2 "
+                         "footer footer footer"
+
+ 
+
+}
+}
+
+	</style>
+	
+</body>
+</html>
