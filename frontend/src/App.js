@@ -17,13 +17,13 @@ function App() {
                 <a className="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="agregarusuario">Agregar Usuario</a>
+                <a className="nav-link" href="agregarusuario">Crear cuenta</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="editarusuario">Editar Usuario</a>
+                <a className="nav-link" href="editarusuario">Iniciar sesión</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="agregarusuario">Agregar Usuario</a>
+                <a className="nav-link" href="agregarusuario">Acerca de BeatBrand</a>
               </li>
             </ul>
 

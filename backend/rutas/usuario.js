@@ -6,9 +6,9 @@ const eschema = mongoose.Schema;
 
 const eschemausuario = new eschema({
 
-    nombre:String,
-    email: String,
-    telefono: String,
+    nombre_artistico:String,
+    genero_musical: String,
+    diferencial_valor: String,
     idusuario:String
 
 });
@@ -24,9 +24,9 @@ router.get('/ejemplo', (req,res)=>{
 
 router.post('/agregarusuario', (req, res) => {
     const nuevousuario = new ModeloUsuario({
-        nombre: req.body.nombre,
-        email: req.body.email,
-        telefono: req.body.telefono,
+        nombre_artistico: req.body.nombre,
+        genero_musical: req.body.email,
+        diferencial_valor: req.body.telefono,
         idusuario: req.body.idusuario
     });
 
